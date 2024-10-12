@@ -13,12 +13,21 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
-cc_binary(
+cc_library(
     name = "terminal_colors_example",
-    srcs = ["terminal_colors_example.cpp"],
+    hdrs = glob(["terminal_colors_example.h"]),
+    deps = [
+        ":terminal_colors",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+cc_binary(
+    name = "terminal_colors_demo",
+    srcs = ["terminal_colors_demo.cpp"],
     deps = [
         ":rgb_colors",
-        ":terminal_colors",
+        ":terminal_colors_example",
         "//braille_dots:braille_dots",
     ],
 )

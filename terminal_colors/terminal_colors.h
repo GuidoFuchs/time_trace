@@ -6,6 +6,8 @@ namespace terminal_colors {
 
 enum print_mode {no_color, rgb};
 
+extern void terminal_colors_draw_example();
+
 class terminal_colors {
 private:
   // foreground colors: "\033[38;2;<r>;<g>;<b>m";

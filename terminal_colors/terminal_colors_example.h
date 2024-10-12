@@ -522,14 +522,10 @@ void draw_color_tables(){
   std::cout << color.reset() << "\n\n";
 }
 
-
-int main(int argc, char *argv[]) {
-  static_cast<void>(argc);
-  static_cast<void>(argv);
+extern void terminal_colors_draw_example() {
   simple_example();
   rainbow_loren_ipsum();
   draw_suspicious_ninja();
   draw_color_circle();
   draw_color_tables();
-  return 0;
 }
